@@ -1,13 +1,154 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 140rem;
+  text-align: center;
+}
+
+.header {
+  font-size: 3rem;
+  margin: 3rem 0 3rem 15rem;
+  text-align: left;
+}
+
+.catalog {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  border: 1px solid #ddd;
+  width: calc(100% / 4);
+  height: 10rem;
+  padding: 1rem;
+  margin: 1rem;
+  cursor: pointer;
+  text-align: left;
+}
+
+.card-header {
+  margin-bottom: 1rem;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.body-info {
+  padding: 5px 5px 5px 0;
+  font-size: 1rem;
+}
+
+.profile {
+  padding: 2rem;
+  max-width: 140rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.profile-name {
+  font-size: 2.4rem;
+  margin: 2rem 1rem;
+}
+.box {
+  border: 2px solid #999;
+  font-size: 1.6rem;
+  margin: 1rem;
+}
+
+.profile-box {
+  width: 40rem;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.film-box {
+  max-width: 80rem;
+  height: auto;
+  padding: 1rem;
+}
+
+.box-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.sub-heading {
+  font-size: 1.4rem;
+  margin-top: 5rem;
+  margin-left: 1rem;
+}
+
+.list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.list-item {
+  padding: 1rem 0;
+}
+
+.btn {
+  width: 30rem;
+  height: 5rem;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.btn-primary {
+  background-color: goldenrod;
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    width: 45%;
+  }
+  .header {
+    margin: 3rem 0 3rem 3rem;
+  }
+  .profile-box {
+    width: 30rem;
+  }
+  .film-box {
+    max-width: 60rem;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  .catalog {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  .card {
+    width: 90%;
+  }
+  .header {
+    margin: 3rem 0 3rem 3rem;
+  }
+  .profile-box {
+    width: 90%;
+  }
 }
